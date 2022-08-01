@@ -9,7 +9,57 @@ body{
 
 h1{
     color: #292e47;
-    font-size: 2rem;
+    font-size: 3.75rem;
+    font-weight: 700;
+}
+
+h2{
+    color: #292e47;
+    font-size: 3.125rem;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 	2.5rem;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 	1.5rem;
+    font-weight: 700;
+    color: #FFC600;
+
+}
+
+h5{
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: #43D2FF;
+    margin-bottom: 5px;
+
+}
+
+h5 .regular{
+    font-size: 1.0625rem;
+    font-weight: 400;
+    color: #43D2FF;
+}
+
+h6{
+    font-size: 0.9 rem;
+    color: #F2F4FC;
+    margin-top: 0px;
+}
+
+
+
+p .intro{
+    font-size: 	1.5rem;
+    font-weight: 500;
+}
+
+p{
+    font-size: 1.25rem;
 }
 
 .container{
@@ -42,11 +92,12 @@ li a{
 li a:hover{
     color:#082ac8;
 }
+
 .bot-azul{
     padding: 15px 30px 15px 30px;
     background-color: #082ac8;
     border:0px;
-    color: white;
+    color: #F2F4FC;
     font-size: 1rem;
 }
 
@@ -72,11 +123,9 @@ li a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 650px;
 }
 
 .cards-container{
-    width: 650px;
     position:relative;
     
 }
@@ -84,13 +133,120 @@ li a:hover{
 .card-left{
     position: absolute;
     width: 300px;;
-    left:0px;
+    left:-100px;
     top: 0px;
 }
 
 .card-right{
     position: absolute;
     width: 300px;;
-    right:0px;
-    bottom: 0px;
+    right:-130px;
+    bottom: -100px;
+}
+
+.logos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
+
+.container-recent-projects{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#recent-projects{
+    margin: 100px 0px 150px 0px ;
+}
+
+article{
+    width: 350px;
+}
+
+.div-img-aricle-1{
+    background: url(img/projects-section/1.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+.div-img-aricle-2{
+    background: url(img/projects-section/2.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+.div-img-aricle-3{
+    background: url(img/projects-section/3.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+.projects-link{
+    color:#082ac8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.clients{
+    background-color: #292e47;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    position: relative;
+    padding: 100px;
+}
+
+.clients > h2{
+    color:#F2F4FC;
+}
+
+.memoji{
+    width: 100px;
+}
+
+.memoji-1{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.memoji-2{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.memoji-3{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.memoji-4{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.client-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(/img/project-assets/testimonial-section/profile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.client-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
 }
