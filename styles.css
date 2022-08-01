@@ -367,3 +367,28 @@ input {
       text-decoration: none;
       color: #6B708D;
   }
+
+  .hamburguer{
+      display: none;
+      cursos: pointer;
+  }
+
+  .bar{
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background-color: white;
+  }
+
+
+  @media screen 
+  and (max-device-width: 1200px) 
+   { 
+    body{
+        background-color:#292e47;
+    }
+    .hamburguer{
+        display: block;
+    }
+   }
