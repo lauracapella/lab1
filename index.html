@@ -16,25 +16,27 @@
     <nav class="navigation">
         <img src="img/logos/circle.svg" alt="brandname">
         <ul class="navbar">
-            <li><a href="">Home</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Services</a></li>
+            <li><a class="navbar-link" href="">Home</a></li>
+            <li><a class="navbar-link" href="">Projects</a></li>
+            <li><a class="navbar-link"href="">Services</a></li>
         </ul>
-        <button class="bot-azul">Contact Us</button>
+        <button class="bot-azul bot-azul-menu">Contact Us</button>
+        <div class="hamburguer">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
-    <div class="hamburguer">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
+    
 
     <header id="header">
         <div class="text-header">
             <h1>Empower Your Business With Stunning Design!</h1>
             <p>Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
             <div>
-                <button class="bot-azul">Get in touch</button>
                 <button class="bot-blanco">See our work</button>
+
+                <button class="bot-azul">Get in touch</button>
             </div>
         </div>
         <div class="image-header">
@@ -59,21 +61,27 @@
         <div class="container-recent-projects">
         <article class="recent-projects-article">
             <div class="div-img-aricle-1"></div>
-            <h3 class="recent-projects-tit">Simplify</h3>
-            <p class="recent-projects-desc">UI Design & App Development</p>
-            <a class="projects-link" href="#">Learn More</a>
+            <div class="projects-home-content">
+                <h4 class="recent-projects-tit">Simplify</h4>
+                <p class="recent-projects-desc">UI Design & App Development</p>
+                <a class="projects-link" href="#">Learn More</a>
+            </div>
         </article>
         <article class="recent-projects-article">
             <div class="div-img-aricle-2"> </div>
-            <h3 class="recent-projects-tit">Dashcoin</h3>
-            <p class="recent-projects-desc">Web Development</p>
-            <a class="projects-link" href="#">Learn More</a>
+            <div class="projects-home-content">
+                <h4 class="recent-projects-tit">Dashcoin</h4>
+                <p class="recent-projects-desc">Web Development</p>
+                <a class="projects-link" href="#">Learn More</a>
+            </div>
         </article>
         <article class="recent-projects-article">
             <div class="div-img-aricle-3"></div>
-            <h3 class="recent-projects-tit">Vectorify</h3>
-            <p class="recent-projects-desc">User Experience Design</p>
-            <a class="projects-link" href="#">Learn More</a>
+            <div class="projects-home-content">
+                <h4 class="recent-projects-tit">Vectorify</h4>
+                <p class="recent-projects-desc">User Experience Design</p>
+                <a class="projects-link" href="#">Learn More</a>
+            </div>
         </article>
         </div>
     </section>
@@ -144,6 +152,6 @@
                 <a href="#" class="footer-link">Privacy Policy</a>
         </div>
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

@@ -51,8 +51,6 @@ h6{
     margin-top: 0px;
 }
 
-
-
 .intro{
     font-size: 	1.5rem;
     font-weight: 500;
@@ -65,16 +63,15 @@ p{
 }
 
 .container{
-    width: 1099px;
-    padding: 70px;
+    padding: 0px 70px 0px 70px;
     margin: auto;
 }
 
 .navigation{
     display:flex;
     justify-content: space-between;
-    align-items: center;
-
+    align-items: flex-end;
+    height: 122px;
 }
 
 .navbar {
@@ -86,9 +83,9 @@ p{
 li a{
     text-decoration: none;
     padding: 0px 20px 0px 20px;
-    font-size: 1rem;
+    font-size: 1.0625rem;
+    font-weight: 500;
     color: #6B708D;
-
 }
 
 li a:hover{
@@ -123,13 +120,17 @@ li a:hover{
 
 #header{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 650px;
+    margin-top:100px;
+    text-align: left;
 }
+
 
 .cards-container{
     position:relative;
-    
 }
 
 .card-left{
@@ -137,6 +138,8 @@ li a:hover{
     width: 300px;;
     left:-100px;
     top: 0px;
+    display: block;
+
 }
 
 .card-right{
@@ -144,6 +147,8 @@ li a:hover{
     width: 300px;;
     right:-130px;
     bottom: -100px;
+    display: block;
+
 }
 
 .logos{
@@ -161,12 +166,29 @@ li a:hover{
 }
 
 #recent-projects{
-    margin: 80px 0px 50px 0px ;
+    margin: 80px 0px 150px 0px ;
+    
 }
+
 
 article{
     width: 350px;
+    background-color: white;
 }
+#recent-projects article h4{
+    color: #292e47;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+#recent-projects article p{
+    margin-bottom: 40px;
+}
+.projects-home-content{
+    padding: 25px;
+
+}
+
 
 .div-img-aricle-1{
     background: url(img/projects-section/1.jpg);
@@ -189,7 +211,7 @@ article{
 .projects-link{
     color:#082ac8;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .clients{
@@ -208,31 +230,31 @@ article{
 }
 
 .memoji{
-    width: 100px;
+    width: 150px;
 }
 
 .memoji-1{
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 50px;
+    left: 50px;
 }
 
 .memoji-2{
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 50px;
+    right: 50px;
 }
 
 .memoji-3{
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 50px;
+    right: 50px;
 }
 
 .memoji-4{
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 50px;
+    left: 50px;
 }
 
 .clients-desc {
@@ -370,7 +392,7 @@ input {
 
   .hamburguer{
       display: none;
-      cursos: pointer;
+      cursor: pointer;
   }
 
   .bar{
@@ -378,17 +400,70 @@ input {
       width: 25px;
       height: 3px;
       margin: 5px auto;
-      background-color: white;
+      background-color:#292e47;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
   }
 
 
   @media screen 
   and (max-device-width: 1200px) 
    { 
-    body{
-        background-color:#292e47;
-    }
+
     .hamburguer{
         display: block;
     }
+
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar{
+        position: absolute;
+        left: -100%;
+        top: 130px;
+        gap:0;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+        z-index: 100;
+    }
+
+    .navbar > li{
+        margin: 20px 20px 20px 20px;
+    }
+    .navbar.active{
+        left: 0px;
+        width: 100%;
+        background-color: #cccccc;
+    }
+    .bot-azul-menu{
+        display: none;
+    }
+   
+
+    #header{
+        display: flex;
+        flex-direction: column;
+        height: 650px;
+        margin-top:20px;
+        text-align: center;
+    }
+
+    .card-left{
+        display: none;
+    }
+    
+    .card-right{
+        display: none;
+    }
+    
    }
