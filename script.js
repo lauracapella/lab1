@@ -5,8 +5,7 @@ const navbar = document.querySelector('.navbar');
 
 hamburguer.addEventListener('click', () => {
     hamburguer.classList.toggle("active");
-    navbar.classList.toggle("active")
-
+    navbar.classList.toggle("active");
 })
 
 
