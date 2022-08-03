@@ -22,6 +22,7 @@ h2{
 h3{
     font-size: 	2.5rem;
     font-weight: 700;
+    color: #292e47;
 }
 
 h4{
@@ -63,20 +64,28 @@ p{
 .container{
     padding: 0px 70px 0px 70px;
     margin: auto; 
+    max-width: 1100px;
 }
+
+/* navbar styles */
 
 .navigation{
     display:flex;
     justify-content: space-between;
     align-items: center;
     height: 122px;
+    margin-top: 40px;
+}
+
+.brandlogo{
+    max-width: 55px;
 }
 
 .navbar {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-  }
+}
 
 li a{
     text-decoration: none;
@@ -115,6 +124,8 @@ li a:hover{
     color: #f1f4fc; */
     cursor: pointer;
 }
+
+/* header hero section styles */
 
 #header{
     display: flex;
@@ -161,21 +172,22 @@ li a:hover{
     width: auto;
 }
 
-.container-recent-projects{
+#apidata{
     display: flex;
-    flex-flow: row;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 #recent-projects{
-    margin: 80px 0px 150px 0px ;
+    margin: 80px 0px 150px 0px ;  
 }
 
-article{
+#apidata > article{
     width: 350px;
     background-color: white;
 }
+
 #recent-projects article h4{
     color: #292e47;
     font-weight: 500;
@@ -213,6 +225,8 @@ article{
     text-decoration: none;
     font-weight: 500;
 }
+
+/* Clients quotes area styles*/
 
 .clients{
     background-color: #292e47;
@@ -288,6 +302,8 @@ article{
 
 }
 
+/* Services area styles*/
+
 .services{
     display: flex;
     flex-direction: row;
@@ -338,6 +354,9 @@ article{
     border-radius: 50%;
 }
 
+
+/* Subscribe form  styles*/
+
 .contact-form{
     background-color: #FFC600;
     display: flex;
@@ -346,30 +365,44 @@ article{
     align-items:center;
     margin: 150px 50px;
     position: relative;
-    padding: 100px;
+    padding: 110px;
 }
 
-.contact-form > h2{
+.contact-form > h3{
     text-align: center;
+    margin-bottom: 20px;
 }
 
+.contact-form > button{
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 
 .form-desc{
     color:#6B708D;
     margin-top: 0px;;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.bot-subscribe{
+    padding: 30px 60px;
+    font-size: 1rem;
 }
 
 
 input {
-    padding: 17px 20px 15px 35px;
-    margin: 20px 10px;
+    padding:30px 60px;
+    margin: 20px 20px;
     border: 0px;
-    width: 300px;
+    width: 280px;
+    font-size: 1.2rem;
   }
 
   label {
     position: relative;
+    font-size: 1.5rem;
   }
   
   label:before {
@@ -378,32 +411,48 @@ input {
     left: 20px;
     top: 0;
     bottom: 0;
-    width: 20px;
+    width: 80px;
     background: url(/img/project-assets/newsletter/icon/mail.svg) center / contain no-repeat;
   }
-  
+
+/*   footer styles */  
   footer{
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
+      margin: 12rem 0rem 5rem 0rem;
   }
 
   footer p{
-      font-size: 0.85rem;
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+  }
+
+  footer img{
+    width: 90px;
+    margin-bottom: 0.6rem;
+    margin: left;
   }
 
   .footer-links{
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
+    width: 330px;
   }
 
   .footer-links a{
-      width: 100px;
+      width: 110px;
       text-decoration: none;
-      color: #6B708D;
+      color: #082ac8;
+      font-size: 1.1rem;
   }
+
+  .brand-footer{
+    margin: left;
+}
+
+/*   Hamburguer menu */
 
   .hamburguer{
       display: none;
@@ -424,7 +473,7 @@ input {
   @media screen 
   and (max-width:765px) 
    { 
-
+/* Hamburguer menu */
     .hamburguer{
         display: block;
     }
@@ -460,10 +509,26 @@ input {
         width: 100%;
         background-color: #cccccc;
     }
+
     .bot-azul-menu{
         display: none;
     }
+
+    .navigation{
+        height: 82px;
+        margin-top: 0px;
+    }
+
    
+/* Layout container size */
+    .container{
+        padding: 0px 10px 0px 10px;
+        margin: auto; 
+        max-width: 100%;
+/*         margin-top: -20px;
+ */    }
+
+ /* Layout hero scene size */
 
     #header{
         flex-direction: column;
@@ -482,7 +547,7 @@ input {
     
     .logos{
         flex-wrap: wrap;
-        max-width: 750px;
+        /* max-width: 750px; */
         justify-content: space-between;
     }
     .logos > img{
@@ -494,19 +559,20 @@ input {
    .logos > img:nth-child(5){
         display: none;
     } 
-    .container-recent-projects{
+
+    #apidata{
         display: flex;
-        flex-flow: column;
+        flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
     }
 
-    article{
+    #recent-projects > article{
         width: 100%;
         background-color: white;
         margin-bottom: 50px;
-
     }
+
     #recent-projects article h4{
         color: #292e47;
         font-weight: 500;
@@ -515,7 +581,7 @@ input {
 
     #recent-projects article p{
         margin-bottom: 40px;
-    }
+    } 
 
     .memoji{
         display: none;
@@ -526,12 +592,98 @@ input {
         flex-direction: column;
         margin: 50px 0px 50px 0px;
     }
+
+    .bot-subscribe{
+        padding: 30px 60px;
+        margin: auto;
+        font-size: 1rem;
+    }
+
+    .contact-form{
+        margin-left: 0rem;
+    }
+
+    input{
+        width: 90%;
+    }
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer p{
+        text-align: center;
+    }
+  
+    footer img{
+      margin: auto;
+    }
+
+    .brand-footer{
+        margin: auto;
+    }
+
    }
 
    @media screen 
    and (min-width : 766px)
     and (max-width : 991px)
     { 
+/* Hamburguer menu */
+        .hamburguer{
+            display: block;
+        }
+    
+        .hamburguer.active .bar:nth-child(2){
+            opacity: 0;
+        }
+    
+        .hamburguer.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+    
+        .hamburguer.active .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    
+        .navbar{
+            position: absolute;
+            left: -100%;
+            top: 130px;
+            gap:0;
+            flex-direction: column;
+            width: 100%;
+            transition: 0.3s;
+            z-index: 100;
+        }
+    
+        .navbar > li{
+            margin: 20px 20px 20px 20px;
+        }
+        .navbar.active{
+            left: 0px;
+            width: 100%;
+            background-color: #cccccc;
+        }
+
+        .bot-azul-menu{
+            display: none;
+        }
+
+      
+        
+/* Layout container size */
+        .container{
+            padding: 0px 10px 0px 10px; 
+            margin-top: -20px;
+            margin: auto; 
+            max-width: 100%;
+        }
+
         #header{
             flex-direction: column;
             margin-top:20px;
@@ -539,7 +691,7 @@ input {
         }
         .logos{
             flex-wrap: wrap;
-            max-width: 750px;
+            /* max-width: 750px; */
             justify-content: space-between;
         }
         .logos > img{
@@ -552,14 +704,14 @@ input {
             display: none;
         } 
 
-        .container-recent-projects{
+        #apidata{
             display: flex;
-            flex-flow: column;
+            flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
         }
 
-        article{
+        #recent-projects > article{
             width: 100%;
             background-color: white;
             margin-bottom: 50px;
@@ -573,7 +725,7 @@ input {
 
         #recent-projects article p{
             margin-bottom: 40px;
-        }
+        } 
 
         .memoji{
             width: 100px;
@@ -585,7 +737,17 @@ input {
             margin: 50px 0px 50px 0px;
         }
 
-     
+        .contact-form{
+            margin: 0rem;
+        }
+
+        .contact-form > button{
+            margin: auto;
+        }
+    
+        input{
+            width: 90%;
+        }
 
         input {
             padding: 17px 20px 15px 35px;
@@ -598,8 +760,27 @@ input {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
 
+        footer p{
+            text-align: center;
+        }
+      
+        footer img{
+          margin: auto;
+        }
+
+        .brand-footer{
+            margin: auto;
+        }
+
+        .navigation{
+            height: 82px;
+            margin-top: 10px;
+        }
         
+
     }

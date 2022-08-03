@@ -14,7 +14,7 @@
 <body>
     <div class="container">
     <nav class="navigation">
-        <img src="img/logos/circle.svg" alt="brandname">
+        <img class="brandlogo" src="img/logos/circle.svg" alt="brandname">
         <ul class="navbar">
             <li><a class="navbar-link" href="">Home</a></li>
             <li><a class="navbar-link" href="">Projects</a></li>
@@ -41,7 +41,7 @@
         <div class="image-header">
             <div class="cards-container">
                 <img src="img/card-1.png" alt="credit card" class="card-left">
-                <img src="img/hero_image.png" alt="chico sonriente">
+                <img class="img-yellow-hero" src="img/hero_image.png" alt="chico sonriente">
                 <img src="img/card-2.png" alt="thumbs up" class="card-right">
             </div>
         </div>
@@ -57,8 +57,10 @@
 
     <section id="recent-projects">
         <h3>Recent Projects</h3>
+<!--         <div id="apidata">aaa</div> -->    
         <div class="container-recent-projects">
-        <article class="recent-projects-article">
+
+        <article  class="recent-projects-article" id="apidata">
             <div class="div-img-aricle-1"></div>
             <div class="projects-home-content">
                 <h4 class="recent-projects-tit">Simplify</h4>
@@ -66,22 +68,7 @@
                 <a class="projects-link" href="#">Learn More</a>
             </div>
         </article>
-        <article class="recent-projects-article">
-            <div class="div-img-aricle-2"> </div>
-            <div class="projects-home-content">
-                <h4 class="recent-projects-tit">Dashcoin</h4>
-                <p class="recent-projects-desc">Web Development</p>
-                <a class="projects-link" href="#">Learn More</a>
-            </div>
-        </article>
-        <article class="recent-projects-article">
-            <div class="div-img-aricle-3"></div>
-            <div class="projects-home-content">
-                <h4 class="recent-projects-tit">Vectorify</h4>
-                <p class="recent-projects-desc">User Experience Design</p>
-                <a class="projects-link" href="#">Learn More</a>
-            </div>
-        </article>
+
         </div>
     </section>
     </div>
@@ -106,7 +93,6 @@
         <h3>Our Services</h3>
 
     <section class="services">
-        
         <article class="services-article">
             <div class="services-icon-1"></div>
             <p class="intro services-tit">User Interface Design</p>
@@ -129,13 +115,13 @@
 </div>
 
     <section class="contact-form">
-        <h2 class="form-tit">Do you have any questions?</h2>
-        <h4 class="form-desc">Let us help you!</h4>
+        <h3 class="form-tit">Do you have any questions?</h3>
+        <p class="form-desc">Let us help you!</p>
         <form action="" method="post">
             <label>
                 <input type="email" placeholder="Enter your email" name="email">
             </label>
-            <button class="bot-azul">Suscribe</button>
+            <button class="bot-azul bot-subscribe">Suscribe</button>
         </form>
     </section>
 
