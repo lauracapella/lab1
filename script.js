@@ -48,8 +48,13 @@ getApiData();
 function getApiData2(){
     fetch(apiUrl)
     .then((response) => response.json())
-    .then((res2) => {
-            console.log(res2)
+    .then((data) => {
+        let apiData = `<h1 class="project-content-tit">${data[1].title}</h1>
+        <div class="div-img-aricle-3"></div>
+        <p class="project-content-body">${data[1].body}</p> `
+        document.getElementById("apidata2").innerHTML = apiData;
+
+
     })
 }
 

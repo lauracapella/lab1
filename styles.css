@@ -217,7 +217,7 @@ li a:hover{
 .div-img-aricle-3{
     background: url(img/projects-section/3.jpg);
     background-size: cover;
-    height: 200px;
+    height: 444px;
 }
 
 .projects-link{
@@ -469,6 +469,14 @@ input {
       transition: all 0.3s ease-in-out;
   }
 
+/*   Project detail page */
+    .project-content-tit::first-letter {
+        text-transform: uppercase;
+    }
+
+    .project-content-tit p::first-letter {
+        text-transform: uppercase;
+    }
 
   @media screen 
   and (max-width:765px) 
