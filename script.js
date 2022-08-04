@@ -56,3 +56,30 @@ function getApiData2(){
 getApiData2();
 
 console.log(Date())
+
+// Validate contact form
+
+let nameError = document.getElementById('name-error');
+let emailError = document.getElementById("email-error");
+let phoneError = document.getElementById("phone-error");
+let submitError = document.getElementById("submit-error");
+
+let contactname = document.getElementById('contact-name');
+contactname.addEventListener('contact-name', validateName);
+
+function validateName(){
+    evento.preventDefault();
+    let name = document.getElementById('contact-name').value;
+    if(name.length == 0){
+        nameError.innerHTML = "Correcto"
+        return false;
+     /* }else if(!name.matches(/^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$/)){
+        nameError.innerHTML = "Write a correct name";
+        return false;  */
+    }else{
+        nameError.innerHTML = "Indica tu nombre";
+    }    
+}
+
+
+validateName()
