@@ -37,12 +37,9 @@ function getApiData(){
         });
         document.getElementById("apidata").innerHTML = resApiData;
     })
-
-   
 }
 
 getApiData();
-
 
 
 function getApiData2(){
@@ -53,9 +50,9 @@ function getApiData2(){
         <div class="div-img-aricle-3"></div>
         <p class="project-content-body">${data[1].body}</p> `
         document.getElementById("apidata2").innerHTML = apiData;
-
-
     })
 }
 
 getApiData2();
+
+console.log(Date())
