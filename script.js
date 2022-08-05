@@ -59,31 +59,121 @@ function getApiData2(){
 
 getApiData2();
 
-console.log(Date())
+
 
 // Validate contact form
 
-let nameError = document.getElementById('name-error');
-let emailError = document.getElementById("email-error");
-let phoneError = document.getElementById("phone-error");
-let submitError = document.getElementById("submit-error");
+// Variables que apuntan a los id de cada input del form
 
-let contactname = document.getElementById('contact-name');
-contactname.addEventListener('contact-name', validateName);
+const form = document.querySelector(".contact-form");
 
-function validateName(){
-    evento.preventDefault();
-    let name = document.getElementById('contact-name').value;
-    if(name.length == 0){
-        nameError.innerHTML = "Correcto"
-        return false;
-     /* }else if(!name.matches(/^([A-Z]{1}[a-zñáéíóú]+[\s]*)+$/)){
-        nameError.innerHTML = "Write a correct name";
-        return false;  */
+const contactName = document.querySelector("#contact-name");
+const contactEmail = document.querySelector("#contact-email");
+const contactPhone = document.querySelector("#contact-phone");
+const contactMessage = document.querySelector("#contact-message");
+
+// escucha para eventos en caso de submit form
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    validateInputs();
+})
+
+//funcion que muestra mensaje de error
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector(".error");
+    errorDisplay.innerText = message;
+    inputControl.classList.add("error")
+    inputControl.classList.remove("success")
+}
+
+//funcion que muestra mensaje de exito
+
+const setSuccess = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector(".error");
+    errorDisplay.innerText = "";
+    inputControl.classList.remove("error");
+    inputControl.classList.add("success");
+}
+
+//validar email mediante expresiones
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+//validamos el valor introducido por el usuario de todos los inputs despues de submit
+
+function validateInputs(){
+    const contactNameValue = contactName.value;
+    const contactEmailValue = contactEmail.value;
+    const contactPhoneValue = contactPhone.value;
+
+    //condicional para accionar funcion mostrar error si nombre está vacio
+
+    if(contactNameValue === ""){
+        setError(contactName, "¡Indica tu nombre!")
     }else{
-        nameError.innerHTML = "Indica tu nombre";
-    }    
+        setSuccess(contactName)
+    }
+
+    //condicional para accionar funcion mostrar error si email está vacio o no cumple con los requisitos de la funcion isValidEmail
+
+    if(contactEmailValue === ""){
+        setError(contactEmail, "¡Indica tu email!")
+    }else if(!isValidEmail(contactEmailValue)){
+        setError(contactEmail, "Email incorrecto, introduce un email válido")
+    }else{
+        setSuccess(contactEmail)
+    }
+
+    //condicional para accionar funcion mostrar error si telefono está vacio 
+
+    if(contactPhoneValue.length < 9){
+        setError(contactPhone, "¡Indica tu num de telefono correcto!")
+    }else{
+        setSuccess(contactPhone)
+    }
+
+
 }
 
 
-validateName()
+// ENVIAR DATOS FORMULARIO POST
+
+// Enviar mediante el fetch method un post usando un objeto dentro del fetch como segundo parametro que dentro del mismo pasaremos cierta informacion, esta informacion es asociada con los HTTP methods, [CREATE, READ, UPDATE, DELETE]. Vamos a enviar la informacion del formulario al API falso y veremos como se registra el ID correspondiente a la sequencia de objetos que nos presenta el API.
+document.getElementById("addPost").addEventListener("submit", addPost);
+function addPost(preventForm) {
+  
+    preventForm.preventDefault(); // Omite que se envie la info del formulario
+  
+    // Nos traemos la informacion que esta dentro del Input Tag para el titulo y el textArea para el body del post
+    let name = document.getElementById("contact-name").value;
+    let phone = document.getElementById("contact-phone").value;
+    let email = document.getElementById("contact-email").value;
+    let message = document.getElementById("contact-message").value;
+
+    
+    // Using fetch to push to API
+    fetch("https://jsonplaceholder.typicode.com/comments", {
+      method: "POST",
+      headers: {
+        Accept: "text/plain, application/json, */*",
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ name: name, phone: phone, email:email, message:message }),
+    })
+      .then((response) => response.json())
+      .then((dataDeFormulario) => {
+        console.log(dataDeFormulario);
+      });
+    /* body.value = ""; */
+
+    
+  }
+
+
