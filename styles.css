@@ -113,6 +113,15 @@ li a:hover{
     background-color: #292e47;
 }
 
+.bot-azul-menu > a {
+    color: #F2F4FC;
+    text-decoration: none;
+}
+
+.navbar:active{
+   /*  color: #43D2FF; */
+}
+
 .bot-blanco{
     padding: 15px 30px 15px 0px;
     border:0px;
@@ -138,6 +147,18 @@ li a:hover{
     text-align: left;
 }
 
+.text-header > p{
+    line-height: 1.9rem;
+    margin:0px 90px 50px 0px ;
+}
+
+.header-buttons-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
 .cards-container{
     position:relative;
 }
@@ -145,7 +166,7 @@ li a:hover{
 .card-left{
     position: absolute;
     width: 300px;
-    left:-0px;
+    left:0px;
     top: 0px;
     display: block;
 }
@@ -187,9 +208,9 @@ li a:hover{
 
 #apidata > article{
     width: 350px;
-    background-color: white;
-    
+    background-color: white; 
 }
+
 
 #recent-projects article h4{
     color: #292e47;
@@ -200,6 +221,7 @@ li a:hover{
 #recent-projects article p{
     margin-bottom: 40px;
 }
+
 
 .projects-home-content{
     padding: 25px;
@@ -371,6 +393,13 @@ li a:hover{
     padding: 110px;
 }
 
+.form-subscribe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
 .subscribe-form > h3{
     text-align: center;
     margin-bottom: 20px;
@@ -381,6 +410,12 @@ li a:hover{
     margin-bottom: 20px;
 }
 
+.bot-subscribe{
+    padding: 30px 60px;
+    margin: auto;
+    font-size: 1rem;
+    width: 200px;
+}
 
 .form-desc{
     color:#6B708D;
@@ -389,17 +424,12 @@ li a:hover{
     margin-bottom: 1.5rem;
 }
 
-.bot-subscribe{
-    padding: 30px 60px;
-    font-size: 1rem;
-}
-
-
 .subscribe-input {
     padding:30px 60px;
     margin: 20px 20px;
     border: 0px;
     font-size: 1.2rem;
+    width: 300px;
   }
 
   .subscribe-label {
@@ -410,10 +440,10 @@ li a:hover{
  .subscribe-label:before {
     content: "";
     position: absolute;
-    left: 20px;
+    left: 35px;
     top: 0;
     bottom: 0;
-    width: 80px;
+    width: 40px;
     background: url(./img/project-assets/newsletter/icon/mail.svg) center / contain no-repeat;
   }
 
@@ -474,6 +504,14 @@ li a:hover{
     }
 
     /*   Project detail page */
+
+    .project-content-flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .project-content-tit::first-letter {
         text-transform: uppercase;
     }
@@ -482,11 +520,17 @@ li a:hover{
         text-transform: uppercase;
     }
 
+    .contact-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     .contact-form-line{
         display: flex;
         flex-direction: column;
         justify-content: left;
-        width: 100%;
     }
 
     .contact-form-line > span{
@@ -496,14 +540,14 @@ li a:hover{
 
     .contact-form-line > input{
         background-color: rgba(100, 100, 111, 0.1);
-      
         margin: 1rem 1rem 1rem 0rem;
     }
+
 
     .contact-form-line-flex{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     .bot-fullwith{
@@ -562,20 +606,35 @@ li a:hover{
     }
 
    
-/* Layout container size */
+    /* Layout container size */
     .container{
-        padding: 0px 10px 0px 10px;
+        padding: 10px 30px 0px 30px;
         margin: auto; 
         max-width: 100%;
-/*         margin-top: -20px;
- */    }
+   }
 
  /* Layout hero scene size */
 
     #header{
         flex-direction: column;
-        margin-top:20px;
+        margin-top:-20px;
         text-align: center;
+    }
+
+    .text-header > p{
+        line-height: 1.9rem;
+        margin:0px 90px 50px 90px ;
+    }
+
+    .header-buttons-flex{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .bot-blanco{
+        padding: 15px 30px 15px 30px;
+
     }
 
     .card-left{
@@ -606,14 +665,23 @@ li a:hover{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 100%;
+    }
+    
+    #apidata > article{
+        width: 100%;
+        background-color: white; 
+        margin-bottom: 3rem;
+
     }
 
     #recent-projects > article{
-        width: 100%;
         background-color: white;
         margin-bottom: 50px;
+        align-items: stretch;
     }
 
+  
     #recent-projects article h4{
         color: #292e47;
         font-weight: 500;
@@ -623,6 +691,10 @@ li a:hover{
     #recent-projects article p{
         margin-bottom: 40px;
     } 
+
+    .clients{
+        margin: 0px 0px 50px 0px;
+    }
 
     .memoji{
         display: none;
@@ -638,10 +710,18 @@ li a:hover{
         padding: 30px 60px;
         margin: auto;
         font-size: 1rem;
+        width: 85%;
     }
 
     .subscribe-form{
         margin-left: 0rem;
+    }
+
+    .form-subscribe{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
     }
 
     .subscribe-input{
@@ -649,6 +729,7 @@ li a:hover{
         margin: 20px 20px;
         border: 0px;
         font-size: 1.2rem;
+        width: 300px;
     }
 
     footer{
@@ -732,7 +813,7 @@ li a:hover{
         
 /* Layout container size */
         .container{
-            padding: 0px 10px 0px 10px; 
+            padding: 0px 30px 0px 30px; 
             margin-top: -20px;
             margin: auto; 
             max-width: 100%;
@@ -740,9 +821,26 @@ li a:hover{
 
         #header{
             flex-direction: column;
-            margin-top:20px;
+            margin-top:-20px;
             text-align: center;
         }
+
+        .text-header > p{
+            line-height: 1.9rem;
+            margin:0px 90px 50px 90px ;
+        }
+
+        .header-buttons-flex{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+    
+        .bot-blanco{
+            padding: 15px 30px 15px 30px;
+    
+        }
+
         .logos{
             flex-wrap: wrap;
             /* max-width: 750px; */
@@ -762,11 +860,16 @@ li a:hover{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: stretch;
+        }
+
+        #apidata > article{
+            width: 100%;
+            background-color: white; 
+            margin-bottom: 3rem;
         }
 
         #recent-projects > article{
-            width: 100%;
             background-color: white;
             margin-bottom: 50px;
 
@@ -781,6 +884,11 @@ li a:hover{
             margin-bottom: 40px;
         } 
 
+        .clients{
+            margin: 0px 0px 50px 0px;
+        }
+    
+
         .memoji{
             width: 100px;
         }
@@ -789,6 +897,13 @@ li a:hover{
             display: flex;
             flex-direction: column;
             margin: 50px 0px 50px 0px;
+        }
+
+        .bot-subscribe{
+            padding: 30px 60px;
+            margin: auto;
+            font-size: 1rem;
+            width: 85%;
         }
 
         .subscribe-form{
@@ -804,7 +919,7 @@ li a:hover{
             margin: 20px 20px;
             border: 0px;
             font-size: 1.2rem;
-              
+            width: 300px;
         }
 
       /*  .subscribe-input {
@@ -815,14 +930,21 @@ li a:hover{
             position: relative;
             font-size: 1.5rem;
         }
+
+        .form-subscribe{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        
+        }
           
         .subscribe-label:before {
             content: "";
             position: absolute;
-            left: 20px;
+            left: 35px;
             top: 0;
             bottom: 0;
-            width: 80px;
+            width: 40px;
             background: url(./img/project-assets/newsletter/icon/mail.svg) center / contain no-repeat;
         }
         

@@ -47,6 +47,10 @@ function getApiData2(){
     .then((response) => response.json())
     .then((data) => {
         let apiData = `<h1 class="project-content-tit">${data[1].title}</h1>
+        <div class="project-content-flex">
+        <p class="project-content-subtit">UI Design & App Development</p>
+        <p>${new Date().toLocaleString().split(',')[0]}</p>
+        </div>
         <div class="div-img-aricle-3"></div>
         <p class="project-content-body">${data[1].body}</p> `
         document.getElementById("apidata2").innerHTML = apiData;
